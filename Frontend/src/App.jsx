@@ -1,22 +1,42 @@
-
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
+import React from 'react'
 import Home from './pages/Home/home'
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import LoginPage from './pages/Home/LoginPage'
+import RegistrationPage from './pages/Home/RegistrationPage'
+import AboutUs from './pages/Home/AboutUs'
+import ContactUs from './pages/Home/ContactUs'
+import EventMenu from './pages/Menu/EventMenu'
+import Navbar from './pages/Navbar'
+import AdminHome from './pages/Admin/AdminHome'
+import FeedbackManagement from './pages/Admin/FeedbackManagement'
+import OrderManagement from './pages/Admin/OrderManagement'
+import MenuManagement from './pages/Admin/MenuManagement'
 
-function App() {
-  
 
+const App = () => {
   return (
-    <>
     <BrowserRouter>
-       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<h1>About</h1>} />
-        <Route path="/contact" element={<h1>Contact</h1>} />
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/eventmenu" element={<EventMenu />} />
+      <Route path="/aboutus" element={<AboutUs />} />
+      <Route path="/contactus" element={<ContactUs />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/registration" element={<RegistrationPage />} />
+      <Route path="/adminhome" element={<AdminHome />}/>
+      <Route path="/feedbackmanagement" element={<FeedbackManagement />}/>
+      <Route path="/ordermanagement" element={<OrderManagement />}/>
+      {/* <Route path="/menumanagement" element={<MenuManagement />}/>
+      <Route path="/usermanagement" element={<UserManagement />}/> */}
 
-       </Routes>
-    </BrowserRouter>
-    </>
+
+
+
+      {/* <Route path="/contact" element={<ContactUs/>} />
+      <Route path="/driver" element={<DriverBooking/>} />  */}
+    </Routes>
+  </BrowserRouter>
   )
 }
 
