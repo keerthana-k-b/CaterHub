@@ -11,10 +11,10 @@ const AdminHome = () => {
         </div>
         <nav className="mt-5">
           <a href="#" className="block px-6 py-3 hover:bg-indigo-500">Dashboard</a>
-          <a href="#" className="block px-6 py-3 hover:bg-indigo-500">Orders</a>
-          <a href="#" className="block px-6 py-3 hover:bg-indigo-500">Menu Management</a>
-          <a href="#" className="block px-6 py-3 hover:bg-indigo-500">User Management</a>
-          <a href="#" className="block px-6 py-3 hover:bg-indigo-500">Feedback</a>
+          <Link to="/OrderManagement" className="block px-6 py-3 hover:bg-indigo-500">Orders</Link>
+          <Link to="/MenuManagement" className="block px-6 py-3 hover:bg-indigo-500">Menu Management</Link>
+          <Link to="/UserManagement" className="block px-6 py-3 hover:bg-indigo-500">User Management</Link>
+          <Link to="/FeedbackManagement" className="block px-6 py-3 hover:bg-indigo-500">Feedback</Link>
         </nav>
       </div>
 

@@ -11,6 +11,9 @@ import AdminHome from './pages/Admin/AdminHome'
 import FeedbackManagement from './pages/Admin/FeedbackManagement'
 import OrderManagement from './pages/Admin/OrderManagement'
 import MenuManagement from './pages/Admin/MenuManagement'
+import UserManagement from './pages/Admin/UserManagement'
+import CatererHome from './pages/Caterer/CatererHome'
+
 
 
 const App = () => {
@@ -27,8 +30,10 @@ const App = () => {
       <Route path="/adminhome" element={<AdminHome />}/>
       <Route path="/feedbackmanagement" element={<FeedbackManagement />}/>
       <Route path="/ordermanagement" element={<OrderManagement />}/>
-      {/* <Route path="/menumanagement" element={<MenuManagement />}/>
-      <Route path="/usermanagement" element={<UserManagement />}/> */}
+      <Route path="/menumanagement" element={<MenuManagement />}/>
+      <Route path="/usermanagement" element={<UserManagement />}/>
+      <Route path="/feedbackmanagement" element={<FeedbackManagement />}/>
+      <Route path="/catererhome" element={<CatererHome />}/>
 
 
 
