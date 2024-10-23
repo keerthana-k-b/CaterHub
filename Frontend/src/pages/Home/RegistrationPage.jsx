@@ -16,10 +16,42 @@ const RegistrationPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add validation logic here (like checking if passwords match)
-    console.log('Form Data Submitted:', formData);
+  
+    // Validation logic
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords don't match");
+      return;
+    }
+  
+    // Make API request to the backend
+    try {
+      const response = await fetch('http://localhost:5000/api/auth/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      const result = await response.json();
+      if (response.status === 201) {
+        alert('User registered successfully');
+        setFormData({
+          name: '',
+          email: '',
+          password: '',
+          confirmPassword: '',
+          phoneNumber: '',
+        });
+      } else {
+        alert(result.message);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Failed to register');
+    }
   };
 
   const handleCancel = () => {
@@ -167,3 +199,6 @@ const RegistrationPage = () => {
 };
 
 export default RegistrationPage;
+
+
+

@@ -42,8 +42,8 @@ const ContactUs = () => {
           <div className="bg-gray-50 p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Address</h2>
             <p className="text-gray-600">
-              123 CaterHub Street,<br />
-              Catering City, CC 45678
+              Kadaplamattom,<br />
+              Kottayam, 686571
             </p>
           </div>
 
@@ -51,8 +51,8 @@ const ContactUs = () => {
           <div className="bg-gray-50 p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Call Us</h2>
             <p className="text-gray-600">
-              Phone: +1 (555) 123-4567<br />
-              Mobile: +1 (555) 765-4321
+              Phone: +91 9447125260<br />
+              Mobile: +91 8547811947
             </p>
           </div>
 
@@ -60,8 +60,8 @@ const ContactUs = () => {
           <div className="bg-gray-50 p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Email Us</h2>
             <p className="text-gray-600">
-              Email: support@caterhub.com<br />
-              Sales: sales@caterhub.com
+              Email: karthika@caterhub.com<br />
+              Sales: karthika@gmail.com
             </p>
           </div>
 
