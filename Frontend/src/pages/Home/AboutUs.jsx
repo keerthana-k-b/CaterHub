@@ -13,7 +13,7 @@ const AboutUs = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h2>
           <p className="text-gray-600">
-            At CATERHUB, our vision is to revolutionize the catering industry by
+            At Karthika Catering, our vision is to revolutionize the catering industry by
             integrating advanced digital solutions to simplify and enhance the
             overall customer experience. We aim to become the go-to platform for
             all catering needs by offering seamless, customizable, and
@@ -29,7 +29,7 @@ const AboutUs = () => {
             providing them with cutting-edge tools to streamline operations,
             improve customer satisfaction, and optimize their workflow. We
             strive to help caterers focus on what they do best—serving
-            delicious food—while CATERHUB handles the logistics, from menu
+            delicious food—while Karthika Catering handles the logistics, from menu
             management to delivery.
           </p>
         </section>
@@ -49,7 +49,7 @@ const AboutUs = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Team</h2>
           <p className="text-gray-600">
-            CATERHUB is built by a team of passionate professionals with
+          Karthika Catering is built by a team of passionate professionals with
             extensive experience in the catering and tech industries. Our
             dedicated team is constantly working to innovate and improve the
             platform, ensuring it meets the evolving needs of the catering
@@ -88,7 +88,7 @@ const AboutUs = () => {
         {/* Section: Footer */}
         <footer className="text-center mt-8">
           <p className="text-gray-600">
-            Ready to simplify your catering business? Join CATERHUB today and
+            Ready to simplify your catering business? Join Karthika Catering today and
             experience the future of catering management.
           </p>
         </footer>

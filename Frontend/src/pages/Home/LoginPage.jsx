@@ -92,9 +92,9 @@
 
 
 
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import img5 from '/img5.jpg'; // Adjust the path as necessary
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -118,7 +118,6 @@ const LoginPage = () => {
       const result = await response.json();
       if (response.status === 200) {
         alert('Login successful');
-        // Save token in localStorage or redirect to dashboard
         localStorage.setItem('token', result.token);
       } else {
         alert(result.message);
@@ -130,15 +129,21 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 bg-cover bg-center bg-[url('img4.jpg')]">
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-        <h2 className="text-3xl font-bold text-center text-indigo-600 mb-6">
-          CATERHUB
+    <div
+      className="min-h-screen flex items-center justify-center bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${img5})` // Use the imported image here
+      }}
+    >
+      <div className="bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg p-8 rounded-lg shadow-lg max-w-md w-full">
+        <h2 className="text-4xl font-extrabold text-center text-indigo-600 mb-8">
+          Welcome to Karthika Catering
         </h2>
 
         <form onSubmit={handleSubmit}>
-          <div className="mb-6">
-            <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+          {/* Email */}
+          <div className="mb-5">
+            <label htmlFor="email" className="block text-lg font-medium text-gray-700">
               Email Address
             </label>
             <input
@@ -147,14 +152,15 @@ const LoginPage = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"
+              className="mt-2 w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-300"
               placeholder="Enter your email"
               required
             />
           </div>
 
-          <div className="mb-6">
-            <label htmlFor="password" className="block text-gray-700 font-medium mb-2">
+          {/* Password */}
+          <div className="mb-5">
+            <label htmlFor="password" className="block text-lg font-medium text-gray-700">
               Password
             </label>
             <input
@@ -163,20 +169,25 @@ const LoginPage = () => {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600"
+              className="mt-2 w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-300"
               placeholder="Enter your password"
               required
             />
           </div>
 
-          <button type="submit" className="w-full bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">
+          {/* Login Button */}
+          <button
+            type="submit"
+            className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition duration-300"
+          >
             Login
           </button>
         </form>
 
-        <div className="mt-6 flex items-center justify-center">
-          <span className="text-gray-400">Don't have an account?</span>
-          <Link to="/registration" className="text-indigo-600 hover:text-indigo-700 ml-2">
+        {/* Sign-up Link */}
+        <div className="mt-4 flex justify-center">
+          <span className="text-sm text-gray-500">Don't have an account?</span>
+          <Link to="/registration" className="text-indigo-600 hover:text-indigo-700 ml-2 font-medium">
             Sign Up
           </Link>
         </div>
@@ -186,3 +197,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+

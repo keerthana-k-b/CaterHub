@@ -25,13 +25,17 @@ import ClientProfile from './pages/Client/ClientProfile'
 import DeliveryForm from './pages/Client/DeliveryForm'
 import OrderCancellation from './pages/Client/OrderCancellation'
 import OrderUpdate from './pages/Client/OrderUpdate'
-
+import OrderTracking from './pages/Caterer/OrderTracking'
+import { AuthProvider } from './context/AuthContext'
+import { Toaster } from 'react-hot-toast'
 
 
 const App = () => {
   return (
+    <AuthProvider>
     <BrowserRouter>
     <Navbar />
+    <Toaster position="top-right" reverseOrder={false} />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/eventmenu" element={<EventMenu />} />
@@ -58,6 +62,7 @@ const App = () => {
       <Route path="/deliverymanagement" element={<DeliveryManagement />}/>
       <Route path="/manageorders" element={<ManageOrders />}/>
       <Route path="/managemenu" element={<ManageMenu />}/>
+      <Route path="/ordertracking" element={<OrderTracking />}/>
 
 
 
@@ -66,6 +71,7 @@ const App = () => {
       <Route path="/driver" element={<DriverBooking/>} />  */}
     </Routes>
   </BrowserRouter>
+  </AuthProvider>
   )
 }
 

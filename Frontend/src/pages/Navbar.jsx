@@ -58,9 +58,15 @@ const Navbar = () => {
               className="h-10 w-auto mr-3" // Adjust height and spacing if needed
             />
           </Link>
-          <div className="text-black font-bold text-xl">
-            <Link to="/">CATERHUB</Link>
-          </div>
+          {/* <div className="text-black font-bold text-xl">
+            <Link to="/">KARTHIKA CATERING</Link>
+          </div> */}
+
+<div className="text-black font-extrabold text-4xl tracking-wide" style={{ fontFamily: 'Lobster, cursive' }}>
+      <Link to="/">KARTHIKA CATERING</Link>
+    </div>
+
+
         </div>
 
         <div className="space-x-4">
